@@ -25,6 +25,11 @@ vcf.on('error', function(err){
 
 ```
 
+## Documentation
+VCF format specifications and more information about the fileds can be found at
+[1000 genomes webpage](http://www.1000genomes.org/wiki/analysis/variant%20call%20format/vcf-variant-call-format-version-41) and
+[samtools github page](https://github.com/samtools/hts-specs)
+
 ## Contributing
 
 All contributions are welcome.
@@ -37,7 +42,7 @@ If you have any problem or suggestion please open an issue [here](https://github
 
 The MIT License
 
-Copyright (c) 2015, Shyam Rallapalli
+Copyright (c) 2015, Shyam Rallapalli and Martin Page
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
