@@ -1,7 +1,7 @@
 # biojs-vcf
 
-#[![NPM version](http://img.shields.io/npm/v/biojs-vcf.svg)](https://www.npmjs.org/package/biojs-vcf)
-#[![Build Status](https://secure.travis-ci.org/shyamrallapalli/biojs-vcf.png?branch=master)](http://travis-ci.org/shyamrallapalli/biojs-vcf)
+[![NPM version](http://img.shields.io/npm/v/biojs-vcf.svg)](https://www.npmjs.org/package/biojs-vcf)
+[![Build Status](https://secure.travis-ci.org/shyamrallapalli/biojs-vcf.png?branch=master)](http://travis-ci.org/shyamrallapalli/biojs-vcf)
 
 > a vcf parser in javascript
 
@@ -20,7 +20,7 @@ vcf.on('end', function(){
 })
 
 vcf.on('error', function(err){
-    console.error('it's not a vcf', err)
+    console.error('it\'s not a vcf', err)
 })
 
 ```
