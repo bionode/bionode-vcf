@@ -1,0 +1,48 @@
+{
+  "name": "biojs-vcf",
+  "description": "a vcf parser in javascript",
+  "version": "0.1.0",
+  "homepage": "https://github.com/shyamrallapalli/biojs-vcf",
+  "author": {
+    "name": "Shyam Rallapalli",
+    "email": "shyam.rallapalli@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shyamrallapalli/biojs-vcf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shyamrallapalli/biojs-vcf/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shyamrallapalli/biojs-vcf/blob/master/LICENSE"
+    }
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "mkdirp build && browserify -r ./:biojs-vcf -o build/vcf.js",
+    "build-browser": "npm run build",
+    "install": "npm run build"
+  },
+  "dependencies": {
+    "events": "^1.1.0",
+    "fs": "0.0.2",
+    "readline": "^1.2.1",
+    "stream": "0.0.2"
+  },
+  "devDependencies": {
+    "mkdirp": "^0.5.0",
+    "browserify": "6.x",
+    "chai": "1.x",
+    "mocha": "1.x"
+  },
+  "keywords": [
+    "vcf parser",
+    "vcf",
+    "biojs",
+    "biojs"
+  ]
+}
