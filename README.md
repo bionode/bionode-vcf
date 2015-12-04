@@ -1,7 +1,7 @@
 # biojs-vcf
 
-[![NPM version](http://img.shields.io/npm/v/biojs-vcf.svg)](https://www.npmjs.org/package/biojs-vcf) 
-[![Build Status](https://secure.travis-ci.org/shyamrallapalli/biojs-vcf.png?branch=master)](http://travis-ci.org/shyamrallapalli/biojs-vcf) 
+#[![NPM version](http://img.shields.io/npm/v/biojs-vcf.svg)](https://www.npmjs.org/package/biojs-vcf)
+#[![Build Status](https://secure.travis-ci.org/shyamrallapalli/biojs-vcf.png?branch=master)](http://travis-ci.org/shyamrallapalli/biojs-vcf)
 
 > a vcf parser in javascript
 
@@ -10,23 +10,19 @@ Install the module with: `npm install biojs-vcf`
 
 ```javascript
 var vcf = require('biojs-vcf');
-vcf.hello("biojs"); // "hello biojs"
-```
+vcf.read("/path/sample.vcf");
+vcf.on('data', function(feature){
+    console.log(feature);
+})
 
-## Documentation
+vcf.on('end', function(){
+    console.log('end of file')
+})
 
-#### .hello(name)
+vcf.on('error', function(err){
+    console.error('it's not a vcf', err)
+})
 
-**Parameter**: `name`
-**Type**: `String`
-**Example**: `biojs`
-
-The 'hello' method is responsible for showing a name.
-
-How to use this method
-
-```javascript
-vcf.hello('biojs'); // "hello biojs"
 ```
 
 ## Contributing

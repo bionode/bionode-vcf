@@ -18,14 +18,14 @@
 //chai.should();
 
 // requires your main app (specified in index.js)
-var VCF = require('../index');
+var VCF = require('../lib/index');
 var path = require('path');
 var assert = require('assert');
-var filePath = path.join(__dirname, '../sample.vcf');
+var filePath = path.join(__dirname, 'sample.vcf');
 
 var allFeatures = [];
 
-describe('VFF', function(){
+describe('VCF', function(){
   describe('.read', function(){
     it('should read without error', function(done){
 
@@ -68,6 +68,13 @@ var validOutput = [{
             PL: '48,0,123',
             GQ: '51'
         }
+    },
+    attributes: {
+        vcfver: '##fileformat=VCFv4.1',
+        samtools: '##samtoolsVersion=0.1.19-44428cd',
+        reference: '##reference=file://../index/Chalara_fraxinea_TGAC_s1v1_scaffolds.fa'
+
     }
+
 }
 ];
