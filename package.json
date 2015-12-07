@@ -23,7 +23,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha",
-    "build": "mkdirp build && browserify -r ./:biojs-vcf -o build/vcf.js",
+    "build": "mkdir build && browserify -r ./:biojs-vcf -o build/vcf.js",
     "build-browser": "npm run build",
     "install": "npm run build"
   },
