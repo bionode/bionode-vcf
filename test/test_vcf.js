@@ -53,6 +53,7 @@ var validOutput = [
         filter: '.',
         varinfo:
         {   VAR: 'SNP',
+            VARINFO: 'substitution',
             DP: '6',
             VDB: '6.560000e-02',
             RPB: '1.427508e+00',
@@ -81,6 +82,7 @@ var validOutput = [
         filter: '.',
         varinfo:
         {   VAR: 'INDEL',
+            VARINFO: 'deletion',
             IS: '16,0.727273',
             DP: '22',
             VDB: '1.896486e-01',
@@ -108,6 +110,7 @@ var validOutput = [
         filter: '.',
         varinfo:
         {   VAR: 'INDEL',
+            VARINFO: 'insertion',
             IS: '16,0.727273',
             DP: '22',
             VDB: '3.802706e-02',
