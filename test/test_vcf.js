@@ -33,7 +33,7 @@ describe('VCF', function(){
             allFeatures.push(vcf);
         }
 
-        VCF.read(filePath).on('data', onFeature).on('end', done);
+        VCF.read(filePath).on('features', onFeature).on('end', done);
 
     });
     it('should look like a valid output', function () {
