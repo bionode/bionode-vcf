@@ -1,6 +1,6 @@
 /*
- * biojs-vcf
- * https://github.com/shyamrallapalli/biojs-vcf
+ * bionode-vcf
+ * https://github.com/shyamrallapalli/bionode-vcf
  *
  * Copyright (c) 2015 Shyam Rallapalli
  * Licensed under the MIT license.
