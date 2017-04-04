@@ -1,12 +1,21 @@
 # bionode-vcf
 
 [![NPM version](http://img.shields.io/npm/v/bionode-vcf.svg)](https://www.npmjs.org/package/bionode-vcf)
-[![Build Status](https://secure.travis-ci.org/shyamrallapalli/bionode-vcf.png?branch=master)](http://travis-ci.org/shyamrallapalli/bionode-vcf)
+[![Build Status](https://secure.travis-ci.org/bionode/bionode-vcf.png?branch=master)](http://travis-ci.org/bionode/bionode-vcf)
 
 > a vcf parser in javascript
 
 ## Getting Started
-Install the module with: `npm install bionode-vcf`
+
+#### installation
+
+Install the module with: 
+
+```bash
+npm install bionode-vcf
+```
+
+#### usage
 
 ```javascript
 var vcf = require('bionode-vcf');
@@ -36,7 +45,7 @@ All contributions are welcome.
 
 ## Support
 
-If you have any problem or suggestion please open an issue [here](https://github.com/shyamrallapalli/bionode-vcf/issues).
+If you have any problem or suggestion please open an issue [here](https://github.com/bionode/bionode-vcf/issues).
 
 ## License 
 
