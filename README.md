@@ -1,19 +1,50 @@
-# bionode-vcf
+<p align="center">
+  <a href="http://bionode.io">
+    <img height="200" width="200" title="bionode" alt="bionode logo" src="https://rawgithub.com/bionode/bionode/master/docs/bionode-logo.min.svg"/>
+  </a>
+  <br/>
+  <a href="http://bionode.io/">bionode.io</a>
+</p>
 
-[![NPM version](http://img.shields.io/npm/v/bionode-vcf.svg)](https://www.npmjs.org/package/bionode-vcf)
-[![Build Status](https://secure.travis-ci.org/bionode/bionode-vcf.png?branch=master)](http://travis-ci.org/bionode/bionode-vcf)
+
+# bionode-vcf
 
 > a vcf parser in javascript
 
-## Getting Started
+[![npm](https://img.shields.io/npm/v/bionode-ncbi.svg?style=flat-square)](http://npmjs.org/package/bionode-ncbi)
+[![Travis](https://img.shields.io/travis/bionode/bionode-ncbi.svg?style=flat-square)](https://travis-ci.org/bionode/bionode-ncbi)
+[![Coveralls](https://img.shields.io/coveralls/bionode/bionode-ncbi.svg?style=flat-square)](http://coveralls.io/r/bionode/bionode-ncbi)
+[![Dependencies](http://img.shields.io/david/bionode/bionode-ncbi.svg?style=flat-square)](http://david-dm.org/bionode/bionode-ncbi)
+[![npm](https://img.shields.io/npm/dt/bionode-ncbi.svg?style=flat-square)](https://www.npmjs.com/package/bionode-ncbi)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/bionode/bionode)
 
-#### installation
 
-Install the module with: 
+## Install
+
+You need to install the latest Node.JS first, please check [nodejs.org](http://nodejs.org) or do the following:
 
 ```bash
-npm install bionode-vcf
+# Ubuntu
+sudo apt-get install npm
+# Mac
+brew install node
+# Both
+npm install -g n
+n stable
 ```
+
+To use `bionode-ncbi` as a command line tool, you can install it globally with `-g`.
+
+```bash
+npm install bionode-ncbi -g
+```
+
+Or, if you want to use it as a JavaScript library, you need to install it in your local project folder inside the `node_modules` directory by doing the same command **without** `-g`.
+
+```bash
+npm i bionode-ncbi # 'i' can be used as shortcut to 'install'
+```
+
 
 #### usage
 
@@ -34,42 +65,14 @@ vcf.on('error', function(err){
 
 ```
 
+
 ## Documentation
+
 VCF format specifications and more information about the fileds can be found at
 [1000 genomes webpage](http://www.1000genomes.org/wiki/analysis/variant%20call%20format/vcf-variant-call-format-version-41) and
 [samtools github page](https://github.com/samtools/hts-specs)
 
+
 ## Contributing
 
-All contributions are welcome.
-
-## Support
-
-If you have any problem or suggestion please open an issue [here](https://github.com/bionode/bionode-vcf/issues).
-
-## License 
-
-The MIT License
-
-Copyright (c) 2015, Shyam Rallapalli and Martin Page
-
-Permission is hereby granted, free of charge, to any person
-obtaining a copy of this software and associated documentation
-files (the "Software"), to deal in the Software without
-restriction, including without limitation the rights to use,
-copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following
-conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+We welcome all kinds of contributions at all levels of experience, please read the [CONTRIBUTING.md](CONTRIBUTING.md) to get started!
