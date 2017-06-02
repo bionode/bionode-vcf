@@ -11,11 +11,11 @@
 
 > a vcf parser in javascript
 
-[![npm](https://img.shields.io/npm/v/bionode-ncbi.svg?style=flat-square)](http://npmjs.org/package/bionode-ncbi)
-[![Travis](https://img.shields.io/travis/bionode/bionode-ncbi.svg?style=flat-square)](https://travis-ci.org/bionode/bionode-ncbi)
-[![Coveralls](https://img.shields.io/coveralls/bionode/bionode-ncbi.svg?style=flat-square)](http://coveralls.io/r/bionode/bionode-ncbi)
-[![Dependencies](http://img.shields.io/david/bionode/bionode-ncbi.svg?style=flat-square)](http://david-dm.org/bionode/bionode-ncbi)
-[![npm](https://img.shields.io/npm/dt/bionode-ncbi.svg?style=flat-square)](https://www.npmjs.com/package/bionode-ncbi)
+[![npm](https://img.shields.io/npm/v/bionode-vcf.svg?style=flat-square)](http://npmjs.org/package/bionode-vcf)
+[![Travis](https://img.shields.io/travis/bionode/bionode-vcf.svg?style=flat-square)](https://travis-ci.org/bionode/bionode-vcf)
+[![Coveralls](https://img.shields.io/coveralls/bionode/bionode-vcf.svg?style=flat-square)](http://coveralls.io/r/bionode/bionode-vcf)
+[![Dependencies](http://img.shields.io/david/bionode/bionode-vcf.svg?style=flat-square)](http://david-dm.org/bionode/bionode-vcf)
+[![npm](https://img.shields.io/npm/dt/bionode-vcf.svg?style=flat-square)](https://www.npmjs.com/package/bionode-vcf)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/bionode/bionode)
 
 
@@ -33,16 +33,16 @@ npm install -g n
 n stable
 ```
 
-To use `bionode-ncbi` as a command line tool, you can install it globally with `-g`.
+To use `bionode-vcf` as a command line tool, you can install it globally with `-g`.
 
 ```bash
-npm install bionode-ncbi -g
+npm install bionode-vcf -g
 ```
 
 Or, if you want to use it as a JavaScript library, you need to install it in your local project folder inside the `node_modules` directory by doing the same command **without** `-g`.
 
 ```bash
-npm i bionode-ncbi # 'i' can be used as shortcut to 'install'
+npm i bionode-vcf # 'i' can be used as shortcut to 'install'
 ```
 
 
