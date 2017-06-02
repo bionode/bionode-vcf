@@ -25,18 +25,22 @@
     "test": "mocha"
   },
   "dependencies": {
-    "events": "^1.1.0",
-    "readline": "^1.2.1",
+    "events": "^1.1.1",
+    "readline": "^1.3.0",
     "stream": "0.0.2"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4"
+    "chai": "^4.0.1",
+    "mocha": "^3.4.2",
+    "standard": "^10.0.2"
   },
   "keywords": [
     "vcf parser",
     "vcf",
     "bionode",
     "bionode"
-  ]
+],
+"scripts": {
+  "test": "standard && dependency-check ."
+  }
 }
