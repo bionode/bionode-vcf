@@ -22,18 +22,48 @@
 var VCF = require('../lib/index')
 var path = require('path')
 var assert = require('assert')
-var filePath = path.join(__dirname, 'sample.vcf')
 
 var allFeatures = []
 
 describe('VCF', function () {
-  describe('.read', function () {
+  describe('.read .vcf file', function () {
+    var filePath = path.join(__dirname, 'sample.vcf')
+
+    it('should read without error', function (finish) {
+      function onFeature (vcf) {
+        allFeatures.push(vcf)
+      }
+
+      VCF.read(filePath).on('data', onFeature).once('end', finish)
+    })
+    it('should look like a valid output', function () {
+      assert.notStrictEqual(allFeatures, validOutput)
+    })
+  })
+
+  describe('.read .gz file', function () {
+    var filePath = path.join(__dirname, 'sample.gz')
+
     it('should read without error', function (done) {
       function onFeature (vcf) {
         allFeatures.push(vcf)
       }
 
-      VCF.read(filePath).on('data', onFeature).on('end', done)
+      VCF.read(filePath, 'gz').on('data', onFeature).once('end', done)
+    })
+    it('should look like a valid output', function () {
+      assert.notStrictEqual(allFeatures, validOutput)
+    })
+  })
+
+  describe('.read .zip file', function () {
+    var filePath = path.join(__dirname, 'sample.zip')
+    it('should read without error', function (done) {
+      function onFeature (vcf) {
+        allFeatures.push(vcf)
+      }
+
+      VCF.read(filePath, 'zip').on('data', onFeature).once('end', done)
     })
     it('should look like a valid output', function () {
       assert.notStrictEqual(allFeatures, validOutput)

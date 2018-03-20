@@ -48,9 +48,12 @@ npm i bionode-vcf # 'i' can be used as shortcut to 'install'
 
 #### usage
 
+- `vcf.read` takes two params: `path` and `extension`
+- The default extension is `vcf` and available options are `zip` and `gz`.
+
 ```javascript
 var vcf = require('bionode-vcf');
-vcf.read("/path/sample.vcf");
+vcf.read("/path/sample.vcf"); // vcf.read("/path/sample.gz", "gz");
 vcf.on('data', function(feature){
     console.log(feature);
 })
