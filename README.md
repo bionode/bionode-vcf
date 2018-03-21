@@ -46,14 +46,15 @@ npm i bionode-vcf # 'i' can be used as shortcut to 'install'
 ```
 
 
-#### usage
+### Usage
 
-- `vcf.read` takes two params: `path` and `extension`
-- The default extension is `vcf` and available options are `zip` and `gz`.
+#### vcf.read
+- `vcf.read` takes params: `path`
+- The supported filetypes are `vcf`, `zip` and `gz`.
 
 ```javascript
 var vcf = require('bionode-vcf');
-vcf.read("/path/sample.vcf"); // vcf.read("/path/sample.gz", "gz");
+vcf.read("/path/sample.vcf");
 vcf.on('data', function(feature){
     console.log(feature);
 })
@@ -68,6 +69,31 @@ vcf.on('error', function(err){
 
 ```
 
+#### vcf.readStream
+- `vcf.readStream` takes params: `stream` and `extension`
+- The supported extension are `vcf`, `zip` and `gz`.
+
+```javascript
+var vcf = require('bionode-vcf');
+var fileStream = s3.getObject({
+    Bucket: [BUCKETNAME],
+    Key: [FILENAME]
+}).createReadStream();  // or stream data from any other source
+
+vcf.read(filestream, 'zip'); // default value is `vcf`
+vcf.on('data', function(feature){
+    console.log(feature);
+})
+
+vcf.on('end', function(){
+    console.log('end of file')
+})
+
+vcf.on('error', function(err){
+    console.error('it\'s not a vcf', err)
+})
+
+```
 
 ## Documentation
 
