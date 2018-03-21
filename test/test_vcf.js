@@ -20,6 +20,7 @@
 
 // requires your main app (specified in index.js)
 var VCF = require('../lib/index')
+var fs = require('fs')
 var path = require('path')
 var assert = require('assert')
 
@@ -49,7 +50,7 @@ describe('VCF', function () {
         allFeatures.push(vcf)
       }
 
-      VCF.read(filePath, 'gz').on('data', onFeature).once('end', done)
+      VCF.read(filePath).on('data', onFeature).once('end', done)
     })
     it('should look like a valid output', function () {
       assert.notStrictEqual(allFeatures, validOutput)
@@ -63,7 +64,23 @@ describe('VCF', function () {
         allFeatures.push(vcf)
       }
 
-      VCF.read(filePath, 'zip').on('data', onFeature).once('end', done)
+      VCF.read(filePath).on('data', onFeature).once('end', done)
+    })
+    it('should look like a valid output', function () {
+      assert.notStrictEqual(allFeatures, validOutput)
+    })
+  })
+
+  describe('.readStream', function () {
+    var filePath = path.join(__dirname, 'sample.vcf')
+    var fileStream = fs.createReadStream(filePath)
+
+    it('should read without error', function (finish) {
+      function onFeature (vcf) {
+        allFeatures.push(vcf)
+      }
+
+      VCF.readStream(fileStream).on('data', onFeature).once('end', finish)
     })
     it('should look like a valid output', function () {
       assert.notStrictEqual(allFeatures, validOutput)
